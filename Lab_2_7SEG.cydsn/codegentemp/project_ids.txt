@@ -1,0 +1,11 @@
+D:\UCU\POC\PSoC_Projects_Embedded\PSoC_LAB1\lab6-psoc-1-shevchuk_lykhanskyi\Lab_1_1_LED.cydsn\Lab_1_1_LED.cyprj|48a64092-bf2d-4193-9fad-ca37380f57be
+D:\PSoc\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|10685012-2e06-4e20-b5fa-eb5786f6e93f
+C:\Users\Lenovo\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|a5f4b8c6-279e-41a8-b5bf-c42e40c42aaf
+D:\PSoc\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|3c6455ea-b966-45d5-bcf0-103853f3e917
+D:\PSoc\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|00ffcfc7-d1c2-4524-a4fd-d34d104167c7
+D:\PSoc\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|3176f88e-e80c-4cdc-9bf3-1c6460d13f9c
+D:\PSoc\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|6f6d3ff7-fce9-4d32-8837-8cbe8c5a67c4
+D:\UCU\POC\PSoC_Projects_Embedded\PSoC_LAB1\lab6-psoc-1-shevchuk_lykhanskyi\Lab_1_2_LED.cydsn\Lab_1_2_LED.cyprj|0e379310-7321-47ed-8aaf-99f3b11242be
+D:\UCU\POC\PSoC_Projects_Embedded\PSoC_LAB1\lab6-psoc-1-shevchuk_lykhanskyi\Lab_1_3_LED.cydsn\Lab_1_3_LED.cyprj|f7e5dd1e-3970-43a7-a4f0-265097a1d4e8
+D:\UCU\POC\PSoC_Projects_Embedded\PSoC_LAB1\lab6-psoc-1-shevchuk_lykhanskyi\Lab_3_1_UART_Transmitting.cydsn\Lab_3_1_UART_Transmitting.cyprj|c2573d2a-9b65-456f-a822-0b8a61929104
+D:\UCU\POC\PSoC_Projects_Embedded\PSoC_LAB1\lab6-psoc-1-shevchuk_lykhanskyi\Lab_2_7SEG.cydsn\Lab_2_7SEG.cyprj|3bf2ff94-3bd5-492e-bea0-9d24fef1e3c8

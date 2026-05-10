@@ -1,0 +1,8 @@
+D:/UCU/POC/PSoC_Projects_Embedded/LABs_BLE/Lab_2_7SEG.cydsn/CortexM0/ARM_GCC_541/Debug/CyBootAsmGnu.o : D:/UCU/POC/PSoC_Projects_Embedded/LABs_BLE/Lab_2_7SEG.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s D:/UCU/POC/PSoC_Projects_Embedded/LABs_BLE/Lab_2_7SEG.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc D:/UCU/POC/PSoC_Projects_Embedded/LABs_BLE/Lab_2_7SEG.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
+
+D:/UCU/POC/PSoC_Projects_Embedded/LABs_BLE/Lab_2_7SEG.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+
+D:/UCU/POC/PSoC_Projects_Embedded/LABs_BLE/Lab_2_7SEG.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+
+D:/UCU/POC/PSoC_Projects_Embedded/LABs_BLE/Lab_2_7SEG.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+

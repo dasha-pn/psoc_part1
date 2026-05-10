@@ -1,0 +1,12 @@
+net Net_59
+	term   ":m0s8tcpwmcell_0.line"
+	switch ":m0s8tcpwmcell_0.line==>Stub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v16+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v18"
+	switch "OStub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v16+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v18"
+	switch ":dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:16,24"
+	switch ":dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:95,24_f"
+	switch "IStub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v93+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v95+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v97"
+	switch "Stub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v93+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v95+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v97==>:ioport2:inputs2_mux.in_1"
+	switch ":ioport2:inputs2_mux.pin6__pin_input==>:ioport2:hsiom_out6.dsi"
+	switch ":ioport2:hsiom_out6.hsiom6_out==>:ioport2:pin6.pin_input"
+	term   ":ioport2:pin6.pin_input"
+end Net_59

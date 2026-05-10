@@ -1,0 +1,7 @@
+net Net_27
+	term   ":m0s8tcpwmcell_3.line"
+	switch ":m0s8tcpwmcell_3.line==>Stub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v21+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v23"
+	switch "Stub-:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v21+:dsiswitch_top@[DSI=(0,1)][side=top]:dsihc_top:v23==>:ioport3:hsiom_out6.fixed_ACT_0"
+	switch ":ioport3:hsiom_out6.hsiom6_out==>:ioport3:pin6.pin_input"
+	term   ":ioport3:pin6.pin_input"
+end Net_27

@@ -1,0 +1,8 @@
+D:/LABs_BLE/LABs_BLE/Lab_1_2_LED.cydsn/CortexM0/ARM_GCC_541/Debug/CyBootAsmGnu.o : D:/LABs_BLE/LABs_BLE/Lab_1_2_LED.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s D:/LABs_BLE/LABs_BLE/Lab_1_2_LED.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc D:/LABs_BLE/LABs_BLE/Lab_1_2_LED.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
+
+D:/LABs_BLE/LABs_BLE/Lab_1_2_LED.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+
+D:/LABs_BLE/LABs_BLE/Lab_1_2_LED.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+
+D:/LABs_BLE/LABs_BLE/Lab_1_2_LED.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+

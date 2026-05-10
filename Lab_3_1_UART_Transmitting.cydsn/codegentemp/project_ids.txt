@@ -1,0 +1,19 @@
+D:\LABs_BLE\LABs_BLE\Lab_1_1_LED.cydsn\Lab_1_1_LED.cyprj|7987c053-4fdb-478a-9da3-f2e5528b9403
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|dfa9aca3-e3f0-4742-b632-90b40e67dfc4
+C:\Users\Admin\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|bea2c1ca-f3a5-4d41-ad24-4f2ec2092142
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|f1256001-8aaa-4333-83fc-106f8ab3009d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|07055970-2a8f-4b2a-84ff-efaf43da4ca3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|f41a1629-86cc-4a18-93df-e360dd5d9280
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|5110027c-43e6-4167-b7b7-9c48ede003e3
+D:\LABs_BLE\LABs_BLE\Lab_1_2_LED.cydsn\Lab_1_2_LED.cyprj|811ea8ee-56d7-41b8-85db-03270c1ade42
+D:\LABs_BLE\LABs_BLE\Lab_1_3_LED.cydsn\Lab_1_3_LED.cyprj|09c81b52-d435-4d51-872c-10ff32bb3b8c
+D:\LABs_BLE\LABs_BLE\Lab_3_1_UART_Transmitting.cydsn\Lab_3_1_UART_Transmitting.cyprj|aa45026c-70b9-4482-b160-fce5dedab73d
+D:\LABs_BLE\LABs_BLE\Lab_3_2_UART_Led.cydsn\Lab_3_2_UART_Led.cyprj|db1b303d-db85-45cd-b763-f48d5d89a768
+D:\LABs_BLE\LABs_BLE\Lab_2_7SEG.cydsn\Lab_2_7SEG.cyprj|fd320748-fa25-4ae4-a3f9-935dfbb7369e
+D:\LABs_BLE\LABs_BLE\Lab_4_1_BLE_Automation_IO.cydsn\Lab_4_1_BLE_Automation_IO.cyprj|85b8e37b-05e8-418b-9957-f3311a4a6a45
+D:\LABs_BLE\LABs_BLE\Lab_1_1_LED_additional_blue.cydsn\Lab_1_1_LED_additional_blue.cyprj|eabb841a-8efd-40cf-bd16-1508108f0ab1
+D:\LABs_BLE\LABs_BLE\Lab_1_1_LED_additional_green.cydsn\Lab_1_1_LED_additional_green.cyprj|b729d91d-ecab-4001-851b-75fe01ad16f4
+D:\LABs_BLE\LABs_BLE\Lab_1_1_LED_additional_red.cydsn\Lab_1_1_LED_additional_red.cyprj|fa4eb203-09fe-4b49-b50e-ca395dc78541
+D:\LABs_BLE\LABs_BLE\Lab_1_2_additional_red.cydsn\Lab_1_2_additional_red.cyprj|5e657d28-3231-4e9b-83c5-09a0d64c54e8
+D:\LABs_BLE\LABs_BLE\Lab_1_2_LED_additional_green.cydsn\Lab_1_2_LED_additional_green.cyprj|f137cba3-fe3c-4fa8-b566-34f6538a39f0
+D:\LABs_BLE\LABs_BLE\Lab_1_3_LED_additional_green.cydsn\Lab_1_3_LED_additional_green.cyprj|7599f0e1-f502-4aa3-8ed3-6c101cb63476

@@ -1,0 +1,18 @@
+D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/CortexM0/ARM_GCC_541/Debug/cyfitter_cfg.o : D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/CyLFClk.h D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/CyLib.h D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/cydevice_trm.h D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/cyfitter.h D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/cytypes.h D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/cyapicallbacks.h 
+
+D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c : 
+
+D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+D:/LABs_BLE/LABs_BLE/Lab_1_2_additional_red.cydsn/cyapicallbacks.h : 
+

@@ -1,0 +1,514 @@
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccbNRNFx.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB35:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include <project.h>
+  13:main.c        **** 
+  14:main.c        **** int main(void)
+  15:main.c        **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 1, uses_anonymous_args = 0
+  32 0000 80B5     		push	{r7, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 7, -8
+  35              		.cfi_offset 14, -4
+  36 0002 82B0     		sub	sp, sp, #8
+  37              		.cfi_def_cfa_offset 16
+  38 0004 00AF     		add	r7, sp, #0
+  39              		.cfi_def_cfa_register 7
+  16:main.c        ****     CyGlobalIntEnable;
+  40              		.loc 1 16 0
+  41              		.syntax divided
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccbNRNFx.s 			page 2
+
+
+  42              	@ 16 "main.c" 1
+  43 0006 62B6     		CPSIE   i
+  44              	@ 0 "" 2
+  17:main.c        **** 
+  18:main.c        ****     Pin_Blue_Write(1);
+  45              		.loc 1 18 0
+  46              		.thumb
+  47              		.syntax unified
+  48 0008 0120     		movs	r0, #1
+  49 000a FFF7FEFF 		bl	Pin_Blue_Write
+  19:main.c        ****     Pin_Green_Write(1);
+  50              		.loc 1 19 0
+  51 000e 0120     		movs	r0, #1
+  52 0010 FFF7FEFF 		bl	Pin_Green_Write
+  20:main.c        **** 
+  21:main.c        ****     PWM_RED_Start();
+  53              		.loc 1 21 0
+  54 0014 FFF7FEFF 		bl	PWM_RED_Start
+  55              	.L6:
+  56              	.LBB2:
+  22:main.c        **** 
+  23:main.c        ****     for(;;)
+  24:main.c        ****     {
+  25:main.c        ****         for (int duty = 0; duty <= 100; duty++)
+  57              		.loc 1 25 0
+  58 0018 0023     		movs	r3, #0
+  59 001a 7B60     		str	r3, [r7, #4]
+  60 001c 0BE0     		b	.L2
+  61              	.L3:
+  26:main.c        ****         {
+  27:main.c        ****             PWM_RED_WriteCompare(100 - duty);
+  62              		.loc 1 27 0 discriminator 3
+  63 001e 7B68     		ldr	r3, [r7, #4]
+  64 0020 6422     		movs	r2, #100
+  65 0022 D31A     		subs	r3, r2, r3
+  66 0024 1800     		movs	r0, r3
+  67 0026 FFF7FEFF 		bl	PWM_RED_WriteCompare
+  28:main.c        ****             CyDelay(20);
+  68              		.loc 1 28 0 discriminator 3
+  69 002a 1420     		movs	r0, #20
+  70 002c FFF7FEFF 		bl	CyDelay
+  25:main.c        ****         {
+  71              		.loc 1 25 0 discriminator 3
+  72 0030 7B68     		ldr	r3, [r7, #4]
+  73 0032 0133     		adds	r3, r3, #1
+  74 0034 7B60     		str	r3, [r7, #4]
+  75              	.L2:
+  25:main.c        ****         {
+  76              		.loc 1 25 0 is_stmt 0 discriminator 1
+  77 0036 7B68     		ldr	r3, [r7, #4]
+  78 0038 642B     		cmp	r3, #100
+  79 003a F0DD     		ble	.L3
+  80              	.LBE2:
+  81              	.LBB3:
+  29:main.c        ****         }
+  30:main.c        **** 
+  31:main.c        ****         for (int duty = 100; duty >= 0; duty--)
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccbNRNFx.s 			page 3
+
+
+  82              		.loc 1 31 0 is_stmt 1
+  83 003c 6423     		movs	r3, #100
+  84 003e 3B60     		str	r3, [r7]
+  85 0040 0BE0     		b	.L4
+  86              	.L5:
+  32:main.c        ****         {
+  33:main.c        ****             PWM_RED_WriteCompare(100 - duty);
+  87              		.loc 1 33 0 discriminator 3
+  88 0042 3B68     		ldr	r3, [r7]
+  89 0044 6422     		movs	r2, #100
+  90 0046 D31A     		subs	r3, r2, r3
+  91 0048 1800     		movs	r0, r3
+  92 004a FFF7FEFF 		bl	PWM_RED_WriteCompare
+  34:main.c        ****             CyDelay(20);
+  93              		.loc 1 34 0 discriminator 3
+  94 004e 1420     		movs	r0, #20
+  95 0050 FFF7FEFF 		bl	CyDelay
+  31:main.c        ****         {
+  96              		.loc 1 31 0 discriminator 3
+  97 0054 3B68     		ldr	r3, [r7]
+  98 0056 013B     		subs	r3, r3, #1
+  99 0058 3B60     		str	r3, [r7]
+ 100              	.L4:
+  31:main.c        ****         {
+ 101              		.loc 1 31 0 is_stmt 0 discriminator 1
+ 102 005a 3B68     		ldr	r3, [r7]
+ 103 005c 002B     		cmp	r3, #0
+ 104 005e F0DA     		bge	.L5
+ 105              	.LBE3:
+  35:main.c        ****         }
+  36:main.c        ****     }
+ 106              		.loc 1 36 0 is_stmt 1
+ 107 0060 DAE7     		b	.L6
+ 108              		.cfi_endproc
+ 109              	.LFE35:
+ 110              		.size	main, .-main
+ 111 0062 C046     		.text
+ 112              	.Letext0:
+ 113              		.section	.debug_info,"",%progbits
+ 114              	.Ldebug_info0:
+ 115 0000 D5000000 		.4byte	0xd5
+ 116 0004 0400     		.2byte	0x4
+ 117 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 118 000a 04       		.byte	0x4
+ 119 000b 01       		.uleb128 0x1
+ 120 000c E9000000 		.4byte	.LASF15
+ 121 0010 0C       		.byte	0xc
+ 122 0011 1B000000 		.4byte	.LASF16
+ 123 0015 27000000 		.4byte	.LASF17
+ 124 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 125 001d 00000000 		.4byte	0
+ 126 0021 00000000 		.4byte	.Ldebug_line0
+ 127 0025 02       		.uleb128 0x2
+ 128 0026 01       		.byte	0x1
+ 129 0027 06       		.byte	0x6
+ 130 0028 C7000000 		.4byte	.LASF0
+ 131 002c 02       		.uleb128 0x2
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccbNRNFx.s 			page 4
+
+
+ 132 002d 01       		.byte	0x1
+ 133 002e 08       		.byte	0x8
+ 134 002f 7A000000 		.4byte	.LASF1
+ 135 0033 02       		.uleb128 0x2
+ 136 0034 02       		.byte	0x2
+ 137 0035 05       		.byte	0x5
+ 138 0036 DF000000 		.4byte	.LASF2
+ 139 003a 02       		.uleb128 0x2
+ 140 003b 02       		.byte	0x2
+ 141 003c 07       		.byte	0x7
+ 142 003d B4000000 		.4byte	.LASF3
+ 143 0041 02       		.uleb128 0x2
+ 144 0042 04       		.byte	0x4
+ 145 0043 05       		.byte	0x5
+ 146 0044 8D000000 		.4byte	.LASF4
+ 147 0048 02       		.uleb128 0x2
+ 148 0049 04       		.byte	0x4
+ 149 004a 07       		.byte	0x7
+ 150 004b 96000000 		.4byte	.LASF5
+ 151 004f 02       		.uleb128 0x2
+ 152 0050 08       		.byte	0x8
+ 153 0051 05       		.byte	0x5
+ 154 0052 00000000 		.4byte	.LASF6
+ 155 0056 02       		.uleb128 0x2
+ 156 0057 08       		.byte	0x8
+ 157 0058 07       		.byte	0x7
+ 158 0059 5D000000 		.4byte	.LASF7
+ 159 005d 03       		.uleb128 0x3
+ 160 005e 04       		.byte	0x4
+ 161 005f 05       		.byte	0x5
+ 162 0060 696E7400 		.ascii	"int\000"
+ 163 0064 02       		.uleb128 0x2
+ 164 0065 04       		.byte	0x4
+ 165 0066 07       		.byte	0x7
+ 166 0067 0E000000 		.4byte	.LASF8
+ 167 006b 02       		.uleb128 0x2
+ 168 006c 04       		.byte	0x4
+ 169 006d 04       		.byte	0x4
+ 170 006e 74000000 		.4byte	.LASF9
+ 171 0072 02       		.uleb128 0x2
+ 172 0073 08       		.byte	0x8
+ 173 0074 04       		.byte	0x4
+ 174 0075 A8000000 		.4byte	.LASF10
+ 175 0079 02       		.uleb128 0x2
+ 176 007a 01       		.byte	0x1
+ 177 007b 08       		.byte	0x8
+ 178 007c 88000000 		.4byte	.LASF11
+ 179 0080 02       		.uleb128 0x2
+ 180 0081 08       		.byte	0x8
+ 181 0082 04       		.byte	0x4
+ 182 0083 D3000000 		.4byte	.LASF12
+ 183 0087 02       		.uleb128 0x2
+ 184 0088 04       		.byte	0x4
+ 185 0089 07       		.byte	0x7
+ 186 008a 77010000 		.4byte	.LASF13
+ 187 008e 04       		.uleb128 0x4
+ 188 008f 22000000 		.4byte	.LASF18
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccbNRNFx.s 			page 5
+
+
+ 189 0093 01       		.byte	0x1
+ 190 0094 0E       		.byte	0xe
+ 191 0095 5D000000 		.4byte	0x5d
+ 192 0099 00000000 		.4byte	.LFB35
+ 193 009d 62000000 		.4byte	.LFE35-.LFB35
+ 194 00a1 01       		.uleb128 0x1
+ 195 00a2 9C       		.byte	0x9c
+ 196 00a3 05       		.uleb128 0x5
+ 197 00a4 18000000 		.4byte	.LBB2
+ 198 00a8 24000000 		.4byte	.LBE2-.LBB2
+ 199 00ac BF000000 		.4byte	0xbf
+ 200 00b0 06       		.uleb128 0x6
+ 201 00b1 AF000000 		.4byte	.LASF14
+ 202 00b5 01       		.byte	0x1
+ 203 00b6 19       		.byte	0x19
+ 204 00b7 5D000000 		.4byte	0x5d
+ 205 00bb 02       		.uleb128 0x2
+ 206 00bc 91       		.byte	0x91
+ 207 00bd 74       		.sleb128 -12
+ 208 00be 00       		.byte	0
+ 209 00bf 07       		.uleb128 0x7
+ 210 00c0 3C000000 		.4byte	.LBB3
+ 211 00c4 24000000 		.4byte	.LBE3-.LBB3
+ 212 00c8 06       		.uleb128 0x6
+ 213 00c9 AF000000 		.4byte	.LASF14
+ 214 00cd 01       		.byte	0x1
+ 215 00ce 1F       		.byte	0x1f
+ 216 00cf 5D000000 		.4byte	0x5d
+ 217 00d3 02       		.uleb128 0x2
+ 218 00d4 91       		.byte	0x91
+ 219 00d5 70       		.sleb128 -16
+ 220 00d6 00       		.byte	0
+ 221 00d7 00       		.byte	0
+ 222 00d8 00       		.byte	0
+ 223              		.section	.debug_abbrev,"",%progbits
+ 224              	.Ldebug_abbrev0:
+ 225 0000 01       		.uleb128 0x1
+ 226 0001 11       		.uleb128 0x11
+ 227 0002 01       		.byte	0x1
+ 228 0003 25       		.uleb128 0x25
+ 229 0004 0E       		.uleb128 0xe
+ 230 0005 13       		.uleb128 0x13
+ 231 0006 0B       		.uleb128 0xb
+ 232 0007 03       		.uleb128 0x3
+ 233 0008 0E       		.uleb128 0xe
+ 234 0009 1B       		.uleb128 0x1b
+ 235 000a 0E       		.uleb128 0xe
+ 236 000b 55       		.uleb128 0x55
+ 237 000c 17       		.uleb128 0x17
+ 238 000d 11       		.uleb128 0x11
+ 239 000e 01       		.uleb128 0x1
+ 240 000f 10       		.uleb128 0x10
+ 241 0010 17       		.uleb128 0x17
+ 242 0011 00       		.byte	0
+ 243 0012 00       		.byte	0
+ 244 0013 02       		.uleb128 0x2
+ 245 0014 24       		.uleb128 0x24
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccbNRNFx.s 			page 6
+
+
+ 246 0015 00       		.byte	0
+ 247 0016 0B       		.uleb128 0xb
+ 248 0017 0B       		.uleb128 0xb
+ 249 0018 3E       		.uleb128 0x3e
+ 250 0019 0B       		.uleb128 0xb
+ 251 001a 03       		.uleb128 0x3
+ 252 001b 0E       		.uleb128 0xe
+ 253 001c 00       		.byte	0
+ 254 001d 00       		.byte	0
+ 255 001e 03       		.uleb128 0x3
+ 256 001f 24       		.uleb128 0x24
+ 257 0020 00       		.byte	0
+ 258 0021 0B       		.uleb128 0xb
+ 259 0022 0B       		.uleb128 0xb
+ 260 0023 3E       		.uleb128 0x3e
+ 261 0024 0B       		.uleb128 0xb
+ 262 0025 03       		.uleb128 0x3
+ 263 0026 08       		.uleb128 0x8
+ 264 0027 00       		.byte	0
+ 265 0028 00       		.byte	0
+ 266 0029 04       		.uleb128 0x4
+ 267 002a 2E       		.uleb128 0x2e
+ 268 002b 01       		.byte	0x1
+ 269 002c 3F       		.uleb128 0x3f
+ 270 002d 19       		.uleb128 0x19
+ 271 002e 03       		.uleb128 0x3
+ 272 002f 0E       		.uleb128 0xe
+ 273 0030 3A       		.uleb128 0x3a
+ 274 0031 0B       		.uleb128 0xb
+ 275 0032 3B       		.uleb128 0x3b
+ 276 0033 0B       		.uleb128 0xb
+ 277 0034 27       		.uleb128 0x27
+ 278 0035 19       		.uleb128 0x19
+ 279 0036 49       		.uleb128 0x49
+ 280 0037 13       		.uleb128 0x13
+ 281 0038 11       		.uleb128 0x11
+ 282 0039 01       		.uleb128 0x1
+ 283 003a 12       		.uleb128 0x12
+ 284 003b 06       		.uleb128 0x6
+ 285 003c 40       		.uleb128 0x40
+ 286 003d 18       		.uleb128 0x18
+ 287 003e 9642     		.uleb128 0x2116
+ 288 0040 19       		.uleb128 0x19
+ 289 0041 00       		.byte	0
+ 290 0042 00       		.byte	0
+ 291 0043 05       		.uleb128 0x5
+ 292 0044 0B       		.uleb128 0xb
+ 293 0045 01       		.byte	0x1
+ 294 0046 11       		.uleb128 0x11
+ 295 0047 01       		.uleb128 0x1
+ 296 0048 12       		.uleb128 0x12
+ 297 0049 06       		.uleb128 0x6
+ 298 004a 01       		.uleb128 0x1
+ 299 004b 13       		.uleb128 0x13
+ 300 004c 00       		.byte	0
+ 301 004d 00       		.byte	0
+ 302 004e 06       		.uleb128 0x6
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccbNRNFx.s 			page 7
+
+
+ 303 004f 34       		.uleb128 0x34
+ 304 0050 00       		.byte	0
+ 305 0051 03       		.uleb128 0x3
+ 306 0052 0E       		.uleb128 0xe
+ 307 0053 3A       		.uleb128 0x3a
+ 308 0054 0B       		.uleb128 0xb
+ 309 0055 3B       		.uleb128 0x3b
+ 310 0056 0B       		.uleb128 0xb
+ 311 0057 49       		.uleb128 0x49
+ 312 0058 13       		.uleb128 0x13
+ 313 0059 02       		.uleb128 0x2
+ 314 005a 18       		.uleb128 0x18
+ 315 005b 00       		.byte	0
+ 316 005c 00       		.byte	0
+ 317 005d 07       		.uleb128 0x7
+ 318 005e 0B       		.uleb128 0xb
+ 319 005f 01       		.byte	0x1
+ 320 0060 11       		.uleb128 0x11
+ 321 0061 01       		.uleb128 0x1
+ 322 0062 12       		.uleb128 0x12
+ 323 0063 06       		.uleb128 0x6
+ 324 0064 00       		.byte	0
+ 325 0065 00       		.byte	0
+ 326 0066 00       		.byte	0
+ 327              		.section	.debug_aranges,"",%progbits
+ 328 0000 1C000000 		.4byte	0x1c
+ 329 0004 0200     		.2byte	0x2
+ 330 0006 00000000 		.4byte	.Ldebug_info0
+ 331 000a 04       		.byte	0x4
+ 332 000b 00       		.byte	0
+ 333 000c 0000     		.2byte	0
+ 334 000e 0000     		.2byte	0
+ 335 0010 00000000 		.4byte	.LFB35
+ 336 0014 62000000 		.4byte	.LFE35-.LFB35
+ 337 0018 00000000 		.4byte	0
+ 338 001c 00000000 		.4byte	0
+ 339              		.section	.debug_ranges,"",%progbits
+ 340              	.Ldebug_ranges0:
+ 341 0000 00000000 		.4byte	.LFB35
+ 342 0004 62000000 		.4byte	.LFE35
+ 343 0008 00000000 		.4byte	0
+ 344 000c 00000000 		.4byte	0
+ 345              		.section	.debug_line,"",%progbits
+ 346              	.Ldebug_line0:
+ 347 0000 65000000 		.section	.debug_str,"MS",%progbits,1
+ 347      02001D00 
+ 347      00000201 
+ 347      FB0E0D00 
+ 347      01010101 
+ 348              	.LASF6:
+ 349 0000 6C6F6E67 		.ascii	"long long int\000"
+ 349      206C6F6E 
+ 349      6720696E 
+ 349      7400
+ 350              	.LASF8:
+ 351 000e 756E7369 		.ascii	"unsigned int\000"
+ 351      676E6564 
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccbNRNFx.s 			page 8
+
+
+ 351      20696E74 
+ 351      00
+ 352              	.LASF16:
+ 353 001b 6D61696E 		.ascii	"main.c\000"
+ 353      2E6300
+ 354              	.LASF18:
+ 355 0022 6D61696E 		.ascii	"main\000"
+ 355      00
+ 356              	.LASF17:
+ 357 0027 443A5C4C 		.ascii	"D:\\LABs_BLE\\LABs_BLE\\Lab_1_1_LED_additional_red."
+ 357      4142735F 
+ 357      424C455C 
+ 357      4C414273 
+ 357      5F424C45 
+ 358 0057 63796473 		.ascii	"cydsn\000"
+ 358      6E00
+ 359              	.LASF7:
+ 360 005d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 360      206C6F6E 
+ 360      6720756E 
+ 360      7369676E 
+ 360      65642069 
+ 361              	.LASF9:
+ 362 0074 666C6F61 		.ascii	"float\000"
+ 362      7400
+ 363              	.LASF1:
+ 364 007a 756E7369 		.ascii	"unsigned char\000"
+ 364      676E6564 
+ 364      20636861 
+ 364      7200
+ 365              	.LASF11:
+ 366 0088 63686172 		.ascii	"char\000"
+ 366      00
+ 367              	.LASF4:
+ 368 008d 6C6F6E67 		.ascii	"long int\000"
+ 368      20696E74 
+ 368      00
+ 369              	.LASF5:
+ 370 0096 6C6F6E67 		.ascii	"long unsigned int\000"
+ 370      20756E73 
+ 370      69676E65 
+ 370      6420696E 
+ 370      7400
+ 371              	.LASF10:
+ 372 00a8 646F7562 		.ascii	"double\000"
+ 372      6C6500
+ 373              	.LASF14:
+ 374 00af 64757479 		.ascii	"duty\000"
+ 374      00
+ 375              	.LASF3:
+ 376 00b4 73686F72 		.ascii	"short unsigned int\000"
+ 376      7420756E 
+ 376      7369676E 
+ 376      65642069 
+ 376      6E7400
+ 377              	.LASF0:
+ 378 00c7 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccbNRNFx.s 			page 9
+
+
+ 378      65642063 
+ 378      68617200 
+ 379              	.LASF12:
+ 380 00d3 6C6F6E67 		.ascii	"long double\000"
+ 380      20646F75 
+ 380      626C6500 
+ 381              	.LASF2:
+ 382 00df 73686F72 		.ascii	"short int\000"
+ 382      7420696E 
+ 382      7400
+ 383              	.LASF15:
+ 384 00e9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 384      43313120 
+ 384      352E342E 
+ 384      31203230 
+ 384      31363036 
+ 385 011c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 385      20726576 
+ 385      6973696F 
+ 385      6E203233 
+ 385      37373135 
+ 386 014f 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 386      66756E63 
+ 386      74696F6E 
+ 386      2D736563 
+ 386      74696F6E 
+ 387              	.LASF13:
+ 388 0177 73697A65 		.ascii	"sizetype\000"
+ 388      74797065 
+ 388      00
+ 389              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

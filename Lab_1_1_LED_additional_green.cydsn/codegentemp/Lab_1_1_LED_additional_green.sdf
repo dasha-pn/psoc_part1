@@ -1,0 +1,25 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2025-11-22T12:15:52Z")
+ (DESIGN "Lab_1_1_LED_additional_green")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.4")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "Lab_1_1_LED_additional_green")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.ff_div_10 \\PWM_GREEN\:cy_m0s8_tcpwm_1\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT \\PWM_GREEN\:cy_m0s8_tcpwm_1\\.line Pin_Green\(0\).pin_input (1.000:1.000:1.000))
+    (INTERCONNECT Pin_Green\(0\).pad_out Pin_Green\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Pin_LED\(0\)_PAD Pin_LED\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Pin_Green\(0\).pad_out Pin_Green\(0\)_PAD (0.000:0.000:0.000))
+    (INTERCONNECT Pin_Green\(0\)_PAD Pin_Green\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Pin_Blue\(0\)_PAD Pin_Blue\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)

@@ -1,0 +1,16 @@
+D:\LABs_BLE\LABs_BLE\Lab_1_1_LED.cydsn\Lab_1_1_LED.cyprj|4d6db6b3-9251-4b26-9692-59c5ffadfbf3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|123a34f9-82e9-41ed-a0e4-ba8047bdb97b
+C:\Users\Admin\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|74fd106e-4274-4fca-abfa-173c71f6bdb3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|f72751cc-452a-4726-a579-a3e9f3e6dc27
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|ac120928-3930-4af6-95be-c09f73aa383e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|af2cb74f-8211-45a8-b32c-60a94735069f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|5444ac21-f96e-4207-83ba-65e68efc434e
+D:\LABs_BLE\LABs_BLE\Lab_1_2_LED.cydsn\Lab_1_2_LED.cyprj|989ec702-f612-4e85-970f-59fc0df59539
+D:\LABs_BLE\LABs_BLE\Lab_1_3_LED.cydsn\Lab_1_3_LED.cyprj|764dbd15-da11-4231-b652-8871ae2e7181
+D:\LABs_BLE\LABs_BLE\Lab_3_1_UART_Transmitting.cydsn\Lab_3_1_UART_Transmitting.cyprj|d7c2b087-c81d-4995-a1b7-2b4331dbc1a5
+D:\LABs_BLE\LABs_BLE\Lab_3_2_UART_Led.cydsn\Lab_3_2_UART_Led.cyprj|d30edaf5-a2ba-40ea-8e69-576a4a08b350
+D:\LABs_BLE\LABs_BLE\Lab_2_7SEG.cydsn\Lab_2_7SEG.cyprj|34402c4b-4e87-4431-ae96-1d003c98be51
+D:\LABs_BLE\LABs_BLE\Lab_4_1_BLE_Automation_IO.cydsn\Lab_4_1_BLE_Automation_IO.cyprj|3be75368-d0c8-436e-af35-00a193fab000
+D:\LABs_BLE\LABs_BLE\Lab_1_1_LED_additional_blue.cydsn\Lab_1_1_LED_additional_blue.cyprj|f5b02557-4244-4566-81f7-d60fc7e00aee
+D:\LABs_BLE\LABs_BLE\Lab_1_1_LED_additional_green.cydsn\Lab_1_1_LED_additional_green.cyprj|19ff33ec-de22-44e3-bd1f-a2721b2299a4
+D:\LABs_BLE\LABs_BLE\Lab_1_1_LED_additional_red.cydsn\Lab_1_1_LED_additional_red.cyprj|b360805e-959b-4b7d-839c-661107a6848b

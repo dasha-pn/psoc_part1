@@ -1,0 +1,477 @@
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccJPINrc.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB35:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include <project.h>
+  13:main.c        **** 
+  14:main.c        **** int main(void)
+  15:main.c        **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 1, uses_anonymous_args = 0
+  32 0000 80B5     		push	{r7, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 7, -8
+  35              		.cfi_offset 14, -4
+  36 0002 82B0     		sub	sp, sp, #8
+  37              		.cfi_def_cfa_offset 16
+  38 0004 00AF     		add	r7, sp, #0
+  39              		.cfi_def_cfa_register 7
+  16:main.c        ****     CyGlobalIntEnable;
+  40              		.loc 1 16 0
+  41              		.syntax divided
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccJPINrc.s 			page 2
+
+
+  42              	@ 16 "main.c" 1
+  43 0006 62B6     		CPSIE   i
+  44              	@ 0 "" 2
+  17:main.c        **** 
+  18:main.c        ****     PWM_RED_Start();
+  45              		.loc 1 18 0
+  46              		.thumb
+  47              		.syntax unified
+  48 0008 FFF7FEFF 		bl	PWM_RED_Start
+  49              	.L6:
+  50              	.LBB2:
+  19:main.c        **** 
+  20:main.c        ****     for(;;)
+  21:main.c        ****     {
+  22:main.c        ****         int duty;
+  23:main.c        **** 
+  24:main.c        ****         for(duty = 0; duty <= 100; duty++)
+  51              		.loc 1 24 0
+  52 000c 0023     		movs	r3, #0
+  53 000e 7B60     		str	r3, [r7, #4]
+  54 0010 0BE0     		b	.L2
+  55              	.L3:
+  25:main.c        ****         {
+  26:main.c        ****             PWM_RED_WriteCompare(100 - duty);
+  56              		.loc 1 26 0 discriminator 3
+  57 0012 7B68     		ldr	r3, [r7, #4]
+  58 0014 6422     		movs	r2, #100
+  59 0016 D31A     		subs	r3, r2, r3
+  60 0018 1800     		movs	r0, r3
+  61 001a FFF7FEFF 		bl	PWM_RED_WriteCompare
+  27:main.c        ****             CyDelay(20);
+  62              		.loc 1 27 0 discriminator 3
+  63 001e 1420     		movs	r0, #20
+  64 0020 FFF7FEFF 		bl	CyDelay
+  24:main.c        ****         {
+  65              		.loc 1 24 0 discriminator 3
+  66 0024 7B68     		ldr	r3, [r7, #4]
+  67 0026 0133     		adds	r3, r3, #1
+  68 0028 7B60     		str	r3, [r7, #4]
+  69              	.L2:
+  24:main.c        ****         {
+  70              		.loc 1 24 0 is_stmt 0 discriminator 1
+  71 002a 7B68     		ldr	r3, [r7, #4]
+  72 002c 642B     		cmp	r3, #100
+  73 002e F0DD     		ble	.L3
+  28:main.c        ****         }
+  29:main.c        **** 
+  30:main.c        ****         for(duty = 100; duty >= 0; duty--)
+  74              		.loc 1 30 0 is_stmt 1
+  75 0030 6423     		movs	r3, #100
+  76 0032 7B60     		str	r3, [r7, #4]
+  77 0034 0BE0     		b	.L4
+  78              	.L5:
+  31:main.c        ****         {
+  32:main.c        ****             PWM_RED_WriteCompare(100 - duty);
+  79              		.loc 1 32 0 discriminator 3
+  80 0036 7B68     		ldr	r3, [r7, #4]
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccJPINrc.s 			page 3
+
+
+  81 0038 6422     		movs	r2, #100
+  82 003a D31A     		subs	r3, r2, r3
+  83 003c 1800     		movs	r0, r3
+  84 003e FFF7FEFF 		bl	PWM_RED_WriteCompare
+  33:main.c        ****             CyDelay(20);
+  85              		.loc 1 33 0 discriminator 3
+  86 0042 1420     		movs	r0, #20
+  87 0044 FFF7FEFF 		bl	CyDelay
+  30:main.c        ****         {
+  88              		.loc 1 30 0 discriminator 3
+  89 0048 7B68     		ldr	r3, [r7, #4]
+  90 004a 013B     		subs	r3, r3, #1
+  91 004c 7B60     		str	r3, [r7, #4]
+  92              	.L4:
+  30:main.c        ****         {
+  93              		.loc 1 30 0 is_stmt 0 discriminator 1
+  94 004e 7B68     		ldr	r3, [r7, #4]
+  95 0050 002B     		cmp	r3, #0
+  96 0052 F0DA     		bge	.L5
+  97              	.LBE2:
+  34:main.c        ****         }
+  35:main.c        ****     }
+  98              		.loc 1 35 0 is_stmt 1
+  99 0054 DAE7     		b	.L6
+ 100              		.cfi_endproc
+ 101              	.LFE35:
+ 102              		.size	main, .-main
+ 103 0056 C046     		.text
+ 104              	.Letext0:
+ 105              		.section	.debug_info,"",%progbits
+ 106              	.Ldebug_info0:
+ 107 0000 B9000000 		.4byte	0xb9
+ 108 0004 0400     		.2byte	0x4
+ 109 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 110 000a 04       		.byte	0x4
+ 111 000b 01       		.uleb128 0x1
+ 112 000c E5000000 		.4byte	.LASF14
+ 113 0010 0C       		.byte	0xc
+ 114 0011 1B000000 		.4byte	.LASF15
+ 115 0015 27000000 		.4byte	.LASF16
+ 116 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 117 001d 00000000 		.4byte	0
+ 118 0021 00000000 		.4byte	.Ldebug_line0
+ 119 0025 02       		.uleb128 0x2
+ 120 0026 01       		.byte	0x1
+ 121 0027 06       		.byte	0x6
+ 122 0028 C3000000 		.4byte	.LASF0
+ 123 002c 02       		.uleb128 0x2
+ 124 002d 01       		.byte	0x1
+ 125 002e 08       		.byte	0x8
+ 126 002f 88000000 		.4byte	.LASF1
+ 127 0033 02       		.uleb128 0x2
+ 128 0034 02       		.byte	0x2
+ 129 0035 05       		.byte	0x5
+ 130 0036 DB000000 		.4byte	.LASF2
+ 131 003a 02       		.uleb128 0x2
+ 132 003b 02       		.byte	0x2
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccJPINrc.s 			page 4
+
+
+ 133 003c 07       		.byte	0x7
+ 134 003d B0000000 		.4byte	.LASF3
+ 135 0041 02       		.uleb128 0x2
+ 136 0042 04       		.byte	0x4
+ 137 0043 05       		.byte	0x5
+ 138 0044 9B000000 		.4byte	.LASF4
+ 139 0048 02       		.uleb128 0x2
+ 140 0049 04       		.byte	0x4
+ 141 004a 07       		.byte	0x7
+ 142 004b 59000000 		.4byte	.LASF5
+ 143 004f 02       		.uleb128 0x2
+ 144 0050 08       		.byte	0x8
+ 145 0051 05       		.byte	0x5
+ 146 0052 00000000 		.4byte	.LASF6
+ 147 0056 02       		.uleb128 0x2
+ 148 0057 08       		.byte	0x8
+ 149 0058 07       		.byte	0x7
+ 150 0059 6B000000 		.4byte	.LASF7
+ 151 005d 03       		.uleb128 0x3
+ 152 005e 04       		.byte	0x4
+ 153 005f 05       		.byte	0x5
+ 154 0060 696E7400 		.ascii	"int\000"
+ 155 0064 02       		.uleb128 0x2
+ 156 0065 04       		.byte	0x4
+ 157 0066 07       		.byte	0x7
+ 158 0067 0E000000 		.4byte	.LASF8
+ 159 006b 02       		.uleb128 0x2
+ 160 006c 04       		.byte	0x4
+ 161 006d 04       		.byte	0x4
+ 162 006e 82000000 		.4byte	.LASF9
+ 163 0072 02       		.uleb128 0x2
+ 164 0073 08       		.byte	0x8
+ 165 0074 04       		.byte	0x4
+ 166 0075 A4000000 		.4byte	.LASF10
+ 167 0079 02       		.uleb128 0x2
+ 168 007a 01       		.byte	0x1
+ 169 007b 08       		.byte	0x8
+ 170 007c 96000000 		.4byte	.LASF11
+ 171 0080 02       		.uleb128 0x2
+ 172 0081 08       		.byte	0x8
+ 173 0082 04       		.byte	0x4
+ 174 0083 CF000000 		.4byte	.LASF12
+ 175 0087 02       		.uleb128 0x2
+ 176 0088 04       		.byte	0x4
+ 177 0089 07       		.byte	0x7
+ 178 008a 73010000 		.4byte	.LASF13
+ 179 008e 04       		.uleb128 0x4
+ 180 008f 22000000 		.4byte	.LASF17
+ 181 0093 01       		.byte	0x1
+ 182 0094 0E       		.byte	0xe
+ 183 0095 5D000000 		.4byte	0x5d
+ 184 0099 00000000 		.4byte	.LFB35
+ 185 009d 56000000 		.4byte	.LFE35-.LFB35
+ 186 00a1 01       		.uleb128 0x1
+ 187 00a2 9C       		.byte	0x9c
+ 188 00a3 05       		.uleb128 0x5
+ 189 00a4 0C000000 		.4byte	.LBB2
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccJPINrc.s 			page 5
+
+
+ 190 00a8 48000000 		.4byte	.LBE2-.LBB2
+ 191 00ac 06       		.uleb128 0x6
+ 192 00ad AB000000 		.4byte	.LASF18
+ 193 00b1 01       		.byte	0x1
+ 194 00b2 16       		.byte	0x16
+ 195 00b3 5D000000 		.4byte	0x5d
+ 196 00b7 02       		.uleb128 0x2
+ 197 00b8 91       		.byte	0x91
+ 198 00b9 74       		.sleb128 -12
+ 199 00ba 00       		.byte	0
+ 200 00bb 00       		.byte	0
+ 201 00bc 00       		.byte	0
+ 202              		.section	.debug_abbrev,"",%progbits
+ 203              	.Ldebug_abbrev0:
+ 204 0000 01       		.uleb128 0x1
+ 205 0001 11       		.uleb128 0x11
+ 206 0002 01       		.byte	0x1
+ 207 0003 25       		.uleb128 0x25
+ 208 0004 0E       		.uleb128 0xe
+ 209 0005 13       		.uleb128 0x13
+ 210 0006 0B       		.uleb128 0xb
+ 211 0007 03       		.uleb128 0x3
+ 212 0008 0E       		.uleb128 0xe
+ 213 0009 1B       		.uleb128 0x1b
+ 214 000a 0E       		.uleb128 0xe
+ 215 000b 55       		.uleb128 0x55
+ 216 000c 17       		.uleb128 0x17
+ 217 000d 11       		.uleb128 0x11
+ 218 000e 01       		.uleb128 0x1
+ 219 000f 10       		.uleb128 0x10
+ 220 0010 17       		.uleb128 0x17
+ 221 0011 00       		.byte	0
+ 222 0012 00       		.byte	0
+ 223 0013 02       		.uleb128 0x2
+ 224 0014 24       		.uleb128 0x24
+ 225 0015 00       		.byte	0
+ 226 0016 0B       		.uleb128 0xb
+ 227 0017 0B       		.uleb128 0xb
+ 228 0018 3E       		.uleb128 0x3e
+ 229 0019 0B       		.uleb128 0xb
+ 230 001a 03       		.uleb128 0x3
+ 231 001b 0E       		.uleb128 0xe
+ 232 001c 00       		.byte	0
+ 233 001d 00       		.byte	0
+ 234 001e 03       		.uleb128 0x3
+ 235 001f 24       		.uleb128 0x24
+ 236 0020 00       		.byte	0
+ 237 0021 0B       		.uleb128 0xb
+ 238 0022 0B       		.uleb128 0xb
+ 239 0023 3E       		.uleb128 0x3e
+ 240 0024 0B       		.uleb128 0xb
+ 241 0025 03       		.uleb128 0x3
+ 242 0026 08       		.uleb128 0x8
+ 243 0027 00       		.byte	0
+ 244 0028 00       		.byte	0
+ 245 0029 04       		.uleb128 0x4
+ 246 002a 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccJPINrc.s 			page 6
+
+
+ 247 002b 01       		.byte	0x1
+ 248 002c 3F       		.uleb128 0x3f
+ 249 002d 19       		.uleb128 0x19
+ 250 002e 03       		.uleb128 0x3
+ 251 002f 0E       		.uleb128 0xe
+ 252 0030 3A       		.uleb128 0x3a
+ 253 0031 0B       		.uleb128 0xb
+ 254 0032 3B       		.uleb128 0x3b
+ 255 0033 0B       		.uleb128 0xb
+ 256 0034 27       		.uleb128 0x27
+ 257 0035 19       		.uleb128 0x19
+ 258 0036 49       		.uleb128 0x49
+ 259 0037 13       		.uleb128 0x13
+ 260 0038 11       		.uleb128 0x11
+ 261 0039 01       		.uleb128 0x1
+ 262 003a 12       		.uleb128 0x12
+ 263 003b 06       		.uleb128 0x6
+ 264 003c 40       		.uleb128 0x40
+ 265 003d 18       		.uleb128 0x18
+ 266 003e 9642     		.uleb128 0x2116
+ 267 0040 19       		.uleb128 0x19
+ 268 0041 00       		.byte	0
+ 269 0042 00       		.byte	0
+ 270 0043 05       		.uleb128 0x5
+ 271 0044 0B       		.uleb128 0xb
+ 272 0045 01       		.byte	0x1
+ 273 0046 11       		.uleb128 0x11
+ 274 0047 01       		.uleb128 0x1
+ 275 0048 12       		.uleb128 0x12
+ 276 0049 06       		.uleb128 0x6
+ 277 004a 00       		.byte	0
+ 278 004b 00       		.byte	0
+ 279 004c 06       		.uleb128 0x6
+ 280 004d 34       		.uleb128 0x34
+ 281 004e 00       		.byte	0
+ 282 004f 03       		.uleb128 0x3
+ 283 0050 0E       		.uleb128 0xe
+ 284 0051 3A       		.uleb128 0x3a
+ 285 0052 0B       		.uleb128 0xb
+ 286 0053 3B       		.uleb128 0x3b
+ 287 0054 0B       		.uleb128 0xb
+ 288 0055 49       		.uleb128 0x49
+ 289 0056 13       		.uleb128 0x13
+ 290 0057 02       		.uleb128 0x2
+ 291 0058 18       		.uleb128 0x18
+ 292 0059 00       		.byte	0
+ 293 005a 00       		.byte	0
+ 294 005b 00       		.byte	0
+ 295              		.section	.debug_aranges,"",%progbits
+ 296 0000 1C000000 		.4byte	0x1c
+ 297 0004 0200     		.2byte	0x2
+ 298 0006 00000000 		.4byte	.Ldebug_info0
+ 299 000a 04       		.byte	0x4
+ 300 000b 00       		.byte	0
+ 301 000c 0000     		.2byte	0
+ 302 000e 0000     		.2byte	0
+ 303 0010 00000000 		.4byte	.LFB35
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccJPINrc.s 			page 7
+
+
+ 304 0014 56000000 		.4byte	.LFE35-.LFB35
+ 305 0018 00000000 		.4byte	0
+ 306 001c 00000000 		.4byte	0
+ 307              		.section	.debug_ranges,"",%progbits
+ 308              	.Ldebug_ranges0:
+ 309 0000 00000000 		.4byte	.LFB35
+ 310 0004 56000000 		.4byte	.LFE35
+ 311 0008 00000000 		.4byte	0
+ 312 000c 00000000 		.4byte	0
+ 313              		.section	.debug_line,"",%progbits
+ 314              	.Ldebug_line0:
+ 315 0000 63000000 		.section	.debug_str,"MS",%progbits,1
+ 315      02001D00 
+ 315      00000201 
+ 315      FB0E0D00 
+ 315      01010101 
+ 316              	.LASF6:
+ 317 0000 6C6F6E67 		.ascii	"long long int\000"
+ 317      206C6F6E 
+ 317      6720696E 
+ 317      7400
+ 318              	.LASF8:
+ 319 000e 756E7369 		.ascii	"unsigned int\000"
+ 319      676E6564 
+ 319      20696E74 
+ 319      00
+ 320              	.LASF15:
+ 321 001b 6D61696E 		.ascii	"main.c\000"
+ 321      2E6300
+ 322              	.LASF17:
+ 323 0022 6D61696E 		.ascii	"main\000"
+ 323      00
+ 324              	.LASF16:
+ 325 0027 443A5C4C 		.ascii	"D:\\LABs_BLE\\LABs_BLE\\Lab_1_2_additional_red.cyds"
+ 325      4142735F 
+ 325      424C455C 
+ 325      4C414273 
+ 325      5F424C45 
+ 326 0057 6E00     		.ascii	"n\000"
+ 327              	.LASF5:
+ 328 0059 6C6F6E67 		.ascii	"long unsigned int\000"
+ 328      20756E73 
+ 328      69676E65 
+ 328      6420696E 
+ 328      7400
+ 329              	.LASF7:
+ 330 006b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 330      206C6F6E 
+ 330      6720756E 
+ 330      7369676E 
+ 330      65642069 
+ 331              	.LASF9:
+ 332 0082 666C6F61 		.ascii	"float\000"
+ 332      7400
+ 333              	.LASF1:
+ 334 0088 756E7369 		.ascii	"unsigned char\000"
+ 334      676E6564 
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccJPINrc.s 			page 8
+
+
+ 334      20636861 
+ 334      7200
+ 335              	.LASF11:
+ 336 0096 63686172 		.ascii	"char\000"
+ 336      00
+ 337              	.LASF4:
+ 338 009b 6C6F6E67 		.ascii	"long int\000"
+ 338      20696E74 
+ 338      00
+ 339              	.LASF10:
+ 340 00a4 646F7562 		.ascii	"double\000"
+ 340      6C6500
+ 341              	.LASF18:
+ 342 00ab 64757479 		.ascii	"duty\000"
+ 342      00
+ 343              	.LASF3:
+ 344 00b0 73686F72 		.ascii	"short unsigned int\000"
+ 344      7420756E 
+ 344      7369676E 
+ 344      65642069 
+ 344      6E7400
+ 345              	.LASF0:
+ 346 00c3 7369676E 		.ascii	"signed char\000"
+ 346      65642063 
+ 346      68617200 
+ 347              	.LASF12:
+ 348 00cf 6C6F6E67 		.ascii	"long double\000"
+ 348      20646F75 
+ 348      626C6500 
+ 349              	.LASF2:
+ 350 00db 73686F72 		.ascii	"short int\000"
+ 350      7420696E 
+ 350      7400
+ 351              	.LASF14:
+ 352 00e5 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 352      43313120 
+ 352      352E342E 
+ 352      31203230 
+ 352      31363036 
+ 353 0118 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 353      20726576 
+ 353      6973696F 
+ 353      6E203233 
+ 353      37373135 
+ 354 014b 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 354      66756E63 
+ 354      74696F6E 
+ 354      2D736563 
+ 354      74696F6E 
+ 355              	.LASF13:
+ 356 0173 73697A65 		.ascii	"sizetype\000"
+ 356      74797065 
+ 356      00
+ 357              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
